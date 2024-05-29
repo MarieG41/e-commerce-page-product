@@ -1,0 +1,77 @@
+
+main {
+    margin-inline: 250px;
+    color: hsl(220, 13%, 13%);
+}
+p {
+    line-height: 150%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.product-main {
+    width: 80%;
+    margin-block-end: 35px;
+}
+.flex {
+    display: flex;
+}
+
+.gallery-img {
+    margin-inline-start: 30px;
+}
+
+.gallery-img img {
+    width: 20%;
+    margin-inline-end: 30px;
+    margin-block-end: 40px;
+}
+img {
+    border-radius: 10px;
+}
+
+.overlay {
+    background-color: hsl(25, 100%, 94%);
+    object-fit: cover;
+    opacity: 0.45;
+}
+
+.active {
+    border: 3px solid hsl(26, 100%, 55%);
+}
+
+.product-infos {
+    margin-block-start: 50px;
+    text-align: left;
+    margin-inline-start: 100px;
+}
+
+.brand {
+    font-variant: small-caps;
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.new-price {
+    display: flex;
+    align-items: center;
+}
+
+.sales-nb {
+    border-radius: 5px;
+    padding-inline: 7px;
+    padding-block: 3px;
+    margin-inline-start: 20px;
+    background-color: hsl(220, 13%, 13%);
+    color: white;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+}

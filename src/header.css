@@ -1,0 +1,29 @@
+header {
+    padding-block: 40px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    margin-block-end: 50px;
+    margin-inline: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-inline-end: 100px;
+    height: 100%;
+}
+
+.menu-items a {
+    margin-inline-end: 50px;
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+}
+
+.cart-img {
+    padding-inline-end: 50px;
+    padding-block-end: 10px;
+}
+
+.mini {
+    width: 25%;
+}
