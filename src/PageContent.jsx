@@ -5,6 +5,7 @@ import productOneThumbNail from './images/image-product-1-thumbnail.jpg'
 import productTwoThumbNail from './images/image-product-2-thumbnail.jpg'
 import productThreeThumbNail from './images/image-product-3-thumbnail.jpg'
 import productFourThumbNail from './images/image-product-4-thumbnail.jpg'
+import cart from './images/icon-cart.svg'
 import './page-content.css'
 
 export default function PageContent() {
@@ -21,9 +22,9 @@ export default function PageContent() {
             </div>
             <div className='product-infos'>
                 <p className='brand'>sneaker company</p>
-                <h1>Fall Limited Edition Sneakers</h1>
+                <h1 className='title'>Fall Limited Edition Sneakers</h1>
 
-                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                <p className='product-description'>These low-profile sneakers are your perfect casual wear companion. Featuring a 
                 durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
                 <div className='new-price'>
@@ -32,11 +33,15 @@ export default function PageContent() {
                 </div>
                 <p className='old-price'>$250.00</p>
 
-                <div className='flex'>
-                    <button><img src={minus} alt="" /></button>
-                    <p>0</p>
-                    <button><img src={plus} alt="" /></button>
-                    <button>Add to cart</button>
+                <div className='flex-bis buttons'>
+                    <div className='grey'>
+                        <button className='grey'><img src={minus} alt="" /></button>
+                        <p className='grey'>0</p>
+                        <button className='grey'><img src={plus} alt="" /></button>
+                    </div>
+                    <div>
+                       <button className='orange'><img className='cart-img-btn' src={cart} alt="" />Add to cart</button> 
+                    </div>
                 </div>
             </div>
         </main>

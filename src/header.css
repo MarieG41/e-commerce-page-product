@@ -27,3 +27,24 @@ header {
 .mini {
     width: 25%;
 }
+
+@media (max-width: 35em) {
+    header {
+        padding-block: 20px;
+        margin-inline: 0;
+        justify-content: space-around;
+        border: none;
+        margin-block-end: 10px;
+    }
+    .logo {
+        margin-inline-end: 0;
+    }
+
+    .menu-items a {
+        display: none;
+    }
+
+    .cart-img {
+        padding-inline-end: 20px;
+    }
+}
