@@ -1,11 +1,13 @@
 import logo from './images/logo.svg'
 import cart from './images/icon-cart.svg'
 import profile from './images/image-avatar.png'
+import burgerMenu from './images/icon-menu.svg'
 import './header.css'
 
 export default function Header() {
     return (
         <header>
+            <img className='menu' src={burgerMenu} alt="" />
             <div className='menu-items'>
                 <img className='logo' src={logo} alt="" />
                 <a href="/">Collections</a>

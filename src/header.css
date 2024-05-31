@@ -8,9 +8,11 @@ header {
     justify-content: space-between;
 }
 
+.menu {display: none;}
+
 .logo {
     margin-inline-end: 100px;
-    height: 100%;
+    border-radius: 0;
 }
 
 .menu-items a {
@@ -36,6 +38,7 @@ header {
         border: none;
         margin-block-end: 10px;
     }
+    .menu {border-radius: 0; display: block;}
     .logo {
         margin-inline-end: 0;
     }
@@ -46,5 +49,15 @@ header {
 
     .cart-img {
         padding-inline-end: 20px;
+    }
+}
+
+@media (max-width: 75em) {
+    header {
+        justify-content: space-around;
+        margin-inline: 10px;
+    }
+    .menu-items a {
+        display: none;
     }
 }

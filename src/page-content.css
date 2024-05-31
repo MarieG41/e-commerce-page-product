@@ -1,6 +1,6 @@
 
 main {
-    margin-inline: 150px;
+    margin-inline: 100px;
     color: hsl(220, 13%, 13%);
 }
 p {
@@ -48,13 +48,14 @@ img {
 .product-infos {
     margin-block-start: 110px;
     text-align: left;
-    margin-inline-start: 50px;
+    margin-inline-start: 30px;
 }
 
 .product-description {
     margin-block-end: 0;
     margin-block-start: 35px;
-    width: 550px;
+    min-width: 350px;
+    max-width: 550px;
     color: hsl(219, 9%, 45%);
 }
 
@@ -170,5 +171,15 @@ img {
     .orange {
         width: 350px;
         margin-block-start: 20px;
+    }
+}
+
+@media (min-width: 45em) and (max-width: 75em) {
+    main {
+        margin-inline: 80px;
+        margin-block-end: 30px;
+    }
+    .grid {
+        display: block;
     }
 }
