@@ -31,6 +31,10 @@ p {
     margin-inline-start: 30px;
     margin-block-end: 40px;
 }
+.gallery-img img:hover {
+    opacity: .6;
+    cursor: pointer;
+}
 img {
     border-radius: 10px;
 }
@@ -112,6 +116,11 @@ img {
     width: 150px;
 }
 
+.grey img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 .orange {
     display: flex;
     justify-content: center;
@@ -122,6 +131,11 @@ img {
     font-weight: 700;
     width: 250px;
     padding-block: 18px;
+}
+
+.orange:hover {
+    background-color: hsla(26, 100%, 55%, 0.733);
+    cursor: pointer;
 }
 
 .cart-img-btn {

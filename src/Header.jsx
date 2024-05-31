@@ -8,8 +8,9 @@ export default function Header() {
     return (
         <header>
             <img className='menu' src={burgerMenu} alt="" />
+            <a href="/"><img className='logo' src={logo} alt="" /></a>
             <div className='menu-items'>
-                <img className='logo' src={logo} alt="" />
+                
                 <a href="/">Collections</a>
                 <a href="/">Men</a>
                 <a href="/">Women</a>
@@ -17,7 +18,7 @@ export default function Header() {
                 <a href="/">Contact</a>
             </div>
             <div className='cart-profile'>
-                <img className='cart-img' src={cart} alt="" />
+                <img className='cart-img' src={cart} alt="" /><span className='notif-nb'>0</span>
                 <img className='mini' src={profile} alt="" />
             </div>
         </header>
