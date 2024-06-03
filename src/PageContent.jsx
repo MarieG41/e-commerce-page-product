@@ -7,10 +7,8 @@ import productThreeThumbNail from './images/image-product-3-thumbnail.jpg'
 import productFourThumbNail from './images/image-product-4-thumbnail.jpg'
 import cart from './images/icon-cart.svg'
 import './page-content.css'
-import { useState } from 'react'
 
-export default function PageContent() {
-    const [counter, setCounter] = useState(0);
+export default function PageContent({ counter, setCounter }) {
     function countPlus() {
         setCounter(counter + 1)
     }
