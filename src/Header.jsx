@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 export default function Header({ counter, setCounter }) {
     const [ cartInfos, setCartInfos ] = useState(false)
-    const [ empty, setEmpty ] = useState(true)
+    const [ empty, setEmpty ] = useState(false)
     function emptyCart() {
         setEmpty((empty) => !empty)
     }
