@@ -5,11 +5,13 @@ import burgerMenu from './images/icon-menu.svg'
 import './header.css'
 import Thumbnail from './images/image-product-1-thumbnail.jpg'
 import trash from './images/icon-delete.svg'
+import close from './images/icon-close.svg'
 import { useState } from 'react'
 
 export default function Header({ counter, setCounter }) {
     const [ cartInfos, setCartInfos ] = useState(false)
     const [ empty, setEmpty ] = useState(false)
+    const [ menu, setMenu ] = useState(false)
     function emptyCart() {
         setEmpty((empty) => !empty)
     }
@@ -19,40 +21,58 @@ export default function Header({ counter, setCounter }) {
     function resetCart() {
         setCounter(0)
     }
+    function openMenu() {
+        setMenu((menu) => !menu)
+    }
+    function closeMenu() {
+        setMenu(!menu)
+    }
     const calcul = 125 * counter
     return (
-        <header>
-            <img className='menu' src={burgerMenu} alt="" />
-            <a href="/"><img className='logo' src={logo} alt="" /></a>
-            <div className='menu-items'>
-                <a href="/">Collections</a>
-                <a href="/">Men</a>
-                <a href="/">Women</a>
-                <a href="/">About</a>
-                <a href="/">Contact</a>
-            </div>
-            <div className='cart-profile'>
-                <img className='cart-img' src={cart} alt="" onClick={toggleCart} /><span className='notif-nb' onClick={emptyCart}>{counter}</span>
-                <img className='mini' src={profile} alt="" />
-            </div>
-
-            {empty &&<div className="cart-previsualization">
-                <h3>Cart</h3>
-                <div className="empty-cart">
-                    <p>You cart is empty</p>
+        <>
+           {menu && <div className="burger-menu-anim">
+                <img className="close-menu" src={close} alt="" onClick={closeMenu}/>
+                <div className='menu-items-mobile'>
+                    <a href="/">Collections</a>
+                    <a href="/">Men</a>
+                    <a href="/">Women</a>
+                    <a href="/">About</a>
+                    <a href="/">Contact</a>
                 </div>
             </div>}
-                {cartInfos && <div className="cart-previsualization">
-                <h3>Cart</h3>
-                <div className="cart-infos-price">
-                    <img className='thumbnail' src={Thumbnail} alt="" />
-                    <p className='title-cart'>Fall Limited Edition Sneakers</p>
-                    <p className='results'>125 x {counter} <span className='bold'>$ {calcul}</span></p>
-                    <img className='transh-can' src={trash} alt="" onClick={resetCart}/>
+            <header>
+                <img className='menu' src={burgerMenu} alt="" onClick={openMenu}/>
+                <a href="/"><img className='logo' src={logo} alt="" /></a>
+                <div className='menu-items'>
+                    <a href="/">Collections</a>
+                    <a href="/">Men</a>
+                    <a href="/">Women</a>
+                    <a href="/">About</a>
+                    <a href="/">Contact</a>
                 </div>
-                <button className='orange'><img className='cart-img-btn' src={cart} alt="" />Checkout</button> 
-            </div>}
-        </header>
+                <div className='cart-profile'>
+                    <img className='cart-img' src={cart} alt="" onClick={toggleCart} /><span className='notif-nb' onClick={emptyCart}>{counter}</span>
+                    <img className='mini' src={profile} alt="" />
+                </div>
+                {empty &&<div className="cart-previsualization">
+                    <h3>Cart</h3>
+                    <div className="empty-cart">
+                        <p>You cart is empty</p>
+                    </div>
+                </div>}
+                    {cartInfos && <div className="cart-previsualization">
+                    <h3>Cart</h3>
+                    <div className="cart-infos-price">
+                        <img className='thumbnail' src={Thumbnail} alt="" />
+                        <p className='title-cart'>Fall Limited Edition Sneakers</p>
+                        <p className='results'>125 x {counter} <span className='bold'>$ {calcul}</span></p>
+                        <img className='transh-can' src={trash} alt="" onClick={resetCart}/>
+                    </div>
+                    <button className='orange'><img className='cart-img-btn' src={cart} alt="" />Checkout</button> 
+                </div>}
+            </header>
+        </>
+        
         
     )
 }

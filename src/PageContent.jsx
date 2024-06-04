@@ -63,7 +63,7 @@ export default function PageContent({ counter, setCounter }) {
         <>
             {
                 lightboxDisplay ? 
-                <div id="lightbox">
+                <div id="lightbox" onClick={hideLightBox}>
                     <div className='close'><img src={close} alt="" onClick={hideLightBox}/></div>
                     <img className='prev' alt='' onClick={showPrev} src={prev}/>
                     <img className='next' alt='' onClick={showNext} src={next}/>  
@@ -74,9 +74,9 @@ export default function PageContent({ counter, setCounter }) {
             }
             <main className='grid'>
                 <div>
-                    <img src={prev} alt="" />
-                    <img className='product-main' src={productOne} alt="" onClick={setLightBoxDisplay}/>
-                    <img src={next} alt="" />
+                    <img className='prev desktop-disabled' src={prev} alt="" onClick={showPrev}/>
+                    <img className='product-main' src={imageToShow} alt="" onClick={setLightBoxDisplay}/>
+                    <img className='next desktop-disabled' src={next} alt="" onClick={showNext}/>
                     <div className='flex gallery-img'>
                         <img className='overlay active' src={productOneThumbNail} alt="" />
                         <img src={productTwoThumbNail} alt="" />

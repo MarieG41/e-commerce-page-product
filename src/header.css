@@ -110,7 +110,28 @@ header {
         border: none;
         margin-block-end: 10px;
     }
-    .menu {border-radius: 0; display: block;}
+    .burger-menu-anim {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 770px;
+        background-color: #fff; 
+        padding-top: 55px;
+        z-index: 5;
+    }
+    .menu {border-radius: 0; display: block; padding: 10px;}
+    .close-menu {
+       padding-right: 140px; 
+       padding-bottom: 50px;
+    }
+    .menu-items-mobile a {
+        text-decoration: none;
+        color: hsl(220, 13%, 13%);
+        display: flex;
+        margin-block-end: 20px;
+        font-weight: 700;
+        margin-inline-start: 20px;
+    }
     .logo {
         margin-inline-end: 0;
     }
@@ -121,6 +142,13 @@ header {
 
     .cart-img {
         padding-inline-end: 20px;
+    }
+    .cart-previsualization {
+        width: 350px;
+        z-index: 100;
+    }
+    .cart-previsualization h3 {
+        padding-inline-end: 280px;
     }
 }
 
